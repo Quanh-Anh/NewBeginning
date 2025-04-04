@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quản Lý - CÂU LẠC BỘ NEW BEGINNING</title>
+    <style>
+        body { font-family: Arial, sans-serif; text-align: center; }
+        .button { padding: 10px 20px; margin: 10px; background-color: #4CAF50; color: white; border: none; cursor: pointer; }
+    </style>
+</head>
+<body>
+    <h1>Chào Mừng Bạn Đến Quản Lý Câu Lạc Bộ</h1>
+    <button class="button" onclick="window.location.href='send-email.html'">Gửi Thư</button>
+    <button class="button" onclick="logout()">Đăng Xuất</button>
+
+    <script>
+        const auth = firebase.auth();
+
+        function logout() {
+            auth.signOut().then(() => {
+                window.location.href = 'login.html';
+            });
+        }
+    </script>
+</body>
+</html>
